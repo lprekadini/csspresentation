@@ -3,14 +3,39 @@
 
 <head>
     <style>
-        /* css here */
+        body{
+            width:100%;
+        }
+        div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation-name: katrori;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        margin:auto;
+        }
+        
+        @keyframes katrori {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:green; left:200px; top:0px;}
+        50%  {background-color:purple; left:200px; top:200px;}
+        75%  {background-color:blue; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+        } 
+
+        p{
+        text-align: center;
+        margin-top: 40px;
+        } 
     </style>
 </head>
 
 <body>
 
-    <button>animated btn</button>
-    <p><strong>Keyframe example:</strong></p>
+    <p><strong>Animation example: </strong></p>
     <div></div>
 
 </body>
