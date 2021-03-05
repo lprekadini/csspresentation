@@ -3,16 +3,77 @@
 
 <head>
     <style>
-        /* css here */
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: rrethi;
+  animation-duration: 6s;
+  animation-direction: reverse;
+  border-radius: 50%;
+  display: inline-block;
+  animation-iteration-count:infinite;
+  margin-left: 500px;
+}
+@keyframes rrethi {
+  0%   {background-color:#009999; left:0px; top:0px;}
+  25%  {background-color:#ff8533; left:200px; top:0px;}
+  50%  {background-color:#66c2ff; left:200px; top:200px;}
+  75%  {background-color:#ff1a1a; left:0px; top:200px;}
+  100% {background-color:#99ff99; left:0px; top:0px;}
+}
+#llatki{
+  text-align: center;
+  margin-top: 40px;
+}
+#center{
+    margin-left: 590px;
+    text-decoration: underline;
+}
+.button {
+  position: relative;
+  border: none;
+  background-color: #e9ec22;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #0a0303;
+  padding-top: 2px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #fcce02;
+}
+.button:after {
+  content: "";
+  background: #8ddd6d;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
     </style>
 </head>
 
 <body>
-
-    <button>animated btn</button>
-    <p><strong>Keyframe example:</strong></p>
-    <div></div>
-
+    <button class="button">animated btn</button>
+    <p id="center"><strong><em>Keyframe example</em></strong></p>
+    <div><p id="llatki">LLATKI</p></div>
 </body>
 
 </html>
