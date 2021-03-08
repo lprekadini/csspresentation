@@ -3,15 +3,56 @@
 
 <head>
     <style>
-        /* css here */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        p{
+            text-align: center;
+            margin: 20px;
+        }
+        .btn{
+            background-color:blue;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 1s;
+            
+        }
+        .btn:hover{
+            background-color:aquamarine;
+            transform: scale(1.2);        
+            }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: shembulli;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        section {
+            width: 500px;
+        }
+        @keyframes shembulli {
+  0%   {background-color:purple; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
     </style>
 </head>
 
 <body>
 
-    <button>animated btn</button>
-    <p><strong>Keyframe example:</strong></p>
-    <div></div>
+    <button class="btn">animated btn</button>
+    <p><strong>Animacioni i Katrorit</strong></p>
+    <section>
+        <div></div>
+    </section>
 
 </body>
 
